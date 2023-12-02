@@ -1,0 +1,9 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+   RewriteBase /
+   RewriteRule    ^$ webroot/    [L]
+</IfModule>
+
+AddType application/x-httpd-php .php .phtml
