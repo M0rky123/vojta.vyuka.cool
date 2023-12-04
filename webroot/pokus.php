@@ -6,6 +6,8 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Vojta Pokus</h1>
+  
+  <h1>Pokus</h1>
+
 </body>
 </html>

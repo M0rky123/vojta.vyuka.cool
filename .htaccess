@@ -1,9 +1,15 @@
-Options -Indexes
+RewriteEngine On
+RewriteBase /
 
-<IfModule mod_rewrite.c>
-   RewriteEngine on
-   RewriteBase /
-   RewriteRule    ^$ webroot/    [L]
-</IfModule>
+# Přesměrování na /webroot/adresa.php, pokud soubor existuje
+RewriteCond %{REQUEST_URI} !^/webroot/
+RewriteCond %{DOCUMENT_ROOT}/webroot%{REQUEST_URI} -f
+RewriteRule !\.(css|js|icon|zip|rar|png|jpg|gif|pdf)$ /webroot/$1 [L]
 
-AddType application/x-httpd-php .php .phtml
+# Přesměrování na /webroot/index.php, pokud soubor adresa.php neexistuje
+RewriteCond %{REQUEST_URI} !^/webroot/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule !\.(css|js|icon|zip|rar|png|jpg|gif|pdf)$ /webroot/index.php [L]
+
+# Přesměrování na /webroot/index.php, pokud je požadavek na /
+RewriteRule ^$ /webroot/index.php [L]

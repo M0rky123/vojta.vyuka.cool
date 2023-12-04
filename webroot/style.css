@@ -1,0 +1,84 @@
+html {
+  background-color: lightskyblue;
+}
+
+body {
+  background-color: white;
+  max-width: 768px;
+  margin-top: -.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem .25rem .25rem .25rem ;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Oxygen, Cantarell, sans-serif;
+}
+
+h1 {
+  padding: .5rem 0 ;
+  margin: 0 ;
+
+  background-color: #DDE1FA ;
+  color: #37383E ;
+  text-align: center ;
+}
+
+img {
+  display: block ;
+  width: 100% ;
+  height: auto ;
+}
+
+nav {
+  background-color: #DDE1FA;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content:space-around;
+  gap: 4px ;
+
+  margin: 0 0 1rem 0 ;
+  padding-left: 0;
+
+}
+
+nav ul li {
+  flex-grow: 1;
+  /* border: 1px solid #DDE1FA ; */
+}
+
+nav ul li a {
+  display: block;
+  text-align: center;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+
+  background-color: #C0C7FA;
+
+  text-decoration: none ;
+}
+
+nav ul li.active a,
+nav ul li a:hover,
+nav ul li a:focus
+{
+  background-color: #A4AEFA;
+}
+
+nav ul li a:hover,
+nav ul li a:focus
+{
+  text-decoration: underline ;
+}
+
+footer {
+  margin: 0 -.25rem -.25rem -.25rem ;
+  padding: 1rem 0 ;
+
+  background-color: lightskyblue ;
+  color: #37383E ;
+
+  text-align: center ;
+  font-size: small ;
+}
