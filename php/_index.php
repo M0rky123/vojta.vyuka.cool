@@ -1,0 +1,3 @@
+<?php
+
+$vysledekVypoctu = "No nazdar" ;
