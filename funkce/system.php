@@ -51,7 +51,7 @@ function vypisMenu(array $menuConfig): string
   if (!$menuConfig) return '';
 
   // zjištění jména souboru se skriptem
-  $adresa = ltrim($_SERVER['SCRIPT_URL'], '/') ;
+  $adresa = ltrim($_SERVER['REQUEST_URI'], '/') ; // SCRIPT_URL
   $adresa = ($adresa) ? $adresa : '/' ;
 
   $rtrn = "";
